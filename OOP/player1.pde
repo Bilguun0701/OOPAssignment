@@ -1,11 +1,12 @@
 class Player
 {
   
-  float x = 50;
-  float y = 50;
+  float x = 200;
+  float y = 200;
   float g = .25;
   int z = 0;
-  float a = 10;
+  float a;
+  float b;
   
   void draw()
   {
@@ -14,7 +15,12 @@ class Player
     if(z == 1)
     {
       y = y - a;
-      a = a - z;
+      a = a - g;
+      
+      if (y >= b)
+      {
+        z = 0;
+      }
     }
     
   }
@@ -43,6 +49,8 @@ class Player
           if (z == 0)
           {
             z = 1;
+            a = 5;
+            b = y;
           }
         }
       }
