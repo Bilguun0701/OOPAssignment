@@ -44,12 +44,6 @@ class Player
           {
             z = 1;
           }
-        } else if (keyCode==DOWN)
-        {
-          if (y < 768)
-          {
-            y=y+7;
-          }
         }
       }
     }
