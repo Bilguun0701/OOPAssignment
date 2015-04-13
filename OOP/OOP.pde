@@ -2,7 +2,9 @@
 
 Player player;
 Menu menu;
+Instruction instruction;
 
+PImage bg;
 PFont f;
 void setup()
 {
@@ -11,6 +13,8 @@ void setup()
   f = createFont("Arial",16,true);
   player = new Player();
   menu = new Menu();
+  instruction = new Instruction();
+  bg = loadImage("instbg.jpg");
 }
 
 int screen = 0;
@@ -26,6 +30,15 @@ void draw()
   {
     player.draw();
     player.keyPressed();
+  }
+  else if(screen == 2)
+  {
+    background(bg);
+    instruction.draw();
+  }
+  else if(screen == 3)
+  {
+    
   }
 }
 
