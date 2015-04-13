@@ -36,9 +36,12 @@ void draw()
   else if(screen == 1)
   {
     player.draw();
-    player.keyPressed();
     stage1.draw();
+    player.keyPressed();
     player.collision();
+    
+    
+    
   }
   else if(screen == 2)
   {

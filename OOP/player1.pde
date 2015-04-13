@@ -1,30 +1,29 @@
 class Player
 {
   
-  float x = 200;
-  float y = 200;
-  float g = .25;
-  int z = 0;
+  float x = 400;
+  float y = 300;
+  float g = .2;
   float a;
-  float b;
+  float f = 0;
   
   void draw()
   {
     background(0);
     fill(255,0,0);
     ellipse(x, y, 50, 50);
-    if(z == 1)
-    {
-      y = y - a;
-      a = a - g;
-    }
   }
   
   void collision()
   {
-    if (get(int(x)+25,int(y)+25) == color(255))
+    if (get(int(x)+25,int(y)+25) != color(255))
     {
-      z = 0;
+        y = y - a;
+        a = a - g;
+    }
+    else
+    {
+      a = 0;
     }
   }
   
@@ -41,17 +40,18 @@ class Player
           {
             x=x-7;
           }
-        } else if (keyCode==RIGHT)
+        } 
+        else if (keyCode==RIGHT)
         {
           if (x < 1024)
           {
             x=x+7;
           }
-        } else if (keyCode==UP)
+        } 
+        else if (keyCode==UP)
         {
-          if (z == 0)
+          if (get(int(x)+25,int(y)+25) == color(255))
           {
-            z = 1;
             a = 10;
           }
         }
