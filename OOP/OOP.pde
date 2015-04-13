@@ -4,6 +4,8 @@ Player player;
 Menu menu;
 Instruction instruction;
 End end;
+Stage1 stage1;
+
 
 PImage htpbg;
 PImage endbg;
@@ -13,6 +15,7 @@ void setup()
   size(1024,768);
   smooth();
   f = createFont("Arial",16,true);
+  stage1 = new Stage1();
   player = new Player();
   menu = new Menu();
   instruction = new Instruction();
@@ -34,6 +37,8 @@ void draw()
   {
     player.draw();
     player.keyPressed();
+    stage1.draw();
+    player.collision();
   }
   else if(screen == 2)
   {
