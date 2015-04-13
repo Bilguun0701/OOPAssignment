@@ -97,7 +97,7 @@ class Menu
         rect(400,525,80,30);
         if (mousePressed == true)
         {
-          screen = 4;
+          exit();
         }
       }
       else

@@ -3,8 +3,10 @@
 Player player;
 Menu menu;
 Instruction instruction;
+End end;
 
-PImage bg;
+PImage htpbg;
+PImage endbg;
 PFont f;
 void setup()
 {
@@ -14,7 +16,9 @@ void setup()
   player = new Player();
   menu = new Menu();
   instruction = new Instruction();
-  bg = loadImage("instbg.jpg");
+  end = new End();
+  htpbg = loadImage("instbg.jpg");
+  endbg = loadImage("endbg.jpg");
 }
 
 int screen = 0;
@@ -33,12 +37,17 @@ void draw()
   }
   else if(screen == 2)
   {
-    background(bg);
+    background(htpbg);
     instruction.draw();
   }
   else if(screen == 3)
   {
     
+  }
+  else if (screen == 4)
+  {
+    background(endbg);
+    end.draw();
   }
 }
 
