@@ -8,6 +8,10 @@ class Player
   float a;
   float b;
   
+  Player
+  {
+  }
+  
   void draw()
   {
     background(0);
@@ -22,41 +26,6 @@ class Player
       {
         z = 0;
       }
-    }
-    
-  }
-  
-  
-  void keyPressed()
-  {
-    if(keyPressed)
-    {
-      if (key==CODED)
-      {
-        if (keyCode==LEFT)
-        {
-          if (x > 0)
-          {
-            x=x-7;
-          }
-        }
-        if (keyCode==RIGHT)
-        {
-          if (x < 1024)
-          {
-            x=x+7;
-          }
-        }
-        if (keyCode==UP)
-        {
-          if (z == 0)
-          {
-            z = 1;
-            a = 5;
-            b = y;
-          }
-        }
-      }
-    }
+    } 
   }
 }

@@ -1,9 +1,10 @@
 //2-D two player mortal kombat style shooter. Assignment 3 for OOP.
 
-Player player;
-Menu menu;
-Instruction instruction;
-End end;
+Player Player1 = new Player();
+Player Player2 = new Player();
+Menu Menu;
+Instruction Instruction;
+End End;
 
 PImage htpbg;
 PImage endbg;
