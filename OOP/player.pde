@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Player
 {
   
@@ -29,3 +30,6 @@ class Player
     } 
   }
 }
+=======
+
+>>>>>>> origin/master

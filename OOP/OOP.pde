@@ -1,10 +1,19 @@
 //2-D two player mortal kombat style shooter. Assignment 3 for OOP.
 
+<<<<<<< HEAD
 Player Player1 = new Player();
 Player Player2 = new Player();
 Menu Menu;
 Instruction Instruction;
 End End;
+=======
+Player player;
+Menu menu;
+Instruction instruction;
+End end;
+Stage1 stage1;
+
+>>>>>>> origin/master
 
 PImage htpbg;
 PImage endbg;
@@ -14,6 +23,7 @@ void setup()
   size(1024,768);
   smooth();
   f = createFont("Arial",16,true);
+  stage1 = new Stage1();
   player = new Player();
   menu = new Menu();
   instruction = new Instruction();
@@ -34,7 +44,12 @@ void draw()
   else if(screen == 1)
   {
     player.draw();
+    stage1.draw();
     player.keyPressed();
+    player.collision();
+    
+    
+    
   }
   else if(screen == 2)
   {
